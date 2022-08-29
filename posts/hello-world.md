@@ -1,6 +1,6 @@
 ---
 title: 'Hello, World! (and how to get there)'
-description: 'A brief summary of what "Hello World!" is and how this site came to be.'
+description: 'A brief summary of what "Hello, World!" is and how this site came to be.'
 date: '2022-08-17'
 ---
 
@@ -17,10 +17,9 @@ NodeJS with NPM - allows running JavaScript code without a browser ; can be inst
 
 Some Javascript, JSX, HTML, CSS - the tutorial only covers the bare minimum 
 
-Powershell or Bash - the tutorial only covers the bare minimum
+Some Bash or Powershell - the tutorial only covers the bare minimum
 
-Git - needed to upload to GitHub if going through the commandline
-# How to get there (with NextJS)
+Some Git - needed to upload to GitHub if going through the commandline
 
 # The tutorial
 
@@ -28,7 +27,7 @@ This personal site was created using NextJS and its accompanying tutorial locate
 
 # Exporting
 
-Throughout the tutorial the site was built and hosted through your own computer. If you would like to host your site on GitHub or GitLab Pages, you'll need to export your site to static files in order to upload them. This can be done easily by editing `package.json` and adding the code below then running `npm run build`
+Throughout the tutorial, the site was built and hosted through your own computer. If you would like to host your site on GitHub Pages or GitLab Pages, you'll need to export your site to static files in order to upload them. This can be done easily by editing `package.json` and adding the code below to the scripts and then running `npm run build`.
 
 ```
 {
@@ -61,4 +60,3 @@ Exporting the site can sometimes cause NextJS to hang, a potential solution that
 # Uploading to GitHub
 
 GitHub allows you to host a static website for free through GitHub Pages. First you'll need to make a repository called `yourname.github.io`, replacing `yourname` with your GitHub username. Then, you'll need to push the files on there. Before pushing, make sure to commit an empty file called `.nojekyll` in the root directory of the repo. That file is necessary because GitHub uses Jekyll to process sites and Jekyll treats files or directories starting with underscores (namely the `_next` folder) differently and they won't be included on the site. After pushing the site onto GitHub, it should be accessible by going to `yourname.github.io`, again replacing `yourname` with your GitHub username.
-
