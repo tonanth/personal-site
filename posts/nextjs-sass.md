@@ -32,6 +32,7 @@ It looks somewhat repetitive due to the `.article-body` class selector, and I fi
 
 This is where Sass (or Syntactically Awesome Style Sheets) come in. Sass is a superset of CSS meaning that (with very little exception) every CSS file is a valid Sass file, so no relearning is necessary. It introduces the ability to nest selectors in braces so it is very clear which rules are being applied where and gives a very clear view of the HTML nesting structure. Here is the code above in Sass SCSS : 
 
+```
 .article-body {
   /* common rules for the entire article */
 
@@ -47,6 +48,7 @@ This is where Sass (or Syntactically Awesome Style Sheets) come in. Sass is a su
     /* even more rules */
   }
 }
+```
 
 Here, I can clearly see which rules are applied and at what level. Ascertaining inherited rules is also easy by just looking at the containing braces and working my way outwards. The application of rules is similar to how scope works in programming languages. I also saved on some typing by not having to type `.article-body` everytime to target its descendants. 
 
