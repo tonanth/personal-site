@@ -7,11 +7,22 @@
 }
 
 .articlebody {
+
+  p code {
+    line-height: inherit;
+  }
+
+  pre {
+    background-color: #f6f6f6;
+    margin: 0px;
+    line-height: 1em;
+    padding: 5px;
+    border-radius: 2px;
+  }
+
   code {
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Courier New', Courier, monospace;
     font-size: medium;
-    line-height: 0;
-    color: purple;
   }
 }
 
