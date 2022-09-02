@@ -2,6 +2,7 @@
 title: 'Hello, World! (and how to get there)'
 description: 'A brief summary of what "Hello, World!" is and how this site came to be.'
 date: '2022-08-17'
+publish: true
 ---
 
 
