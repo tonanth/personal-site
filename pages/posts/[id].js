@@ -4,6 +4,9 @@ import Head from 'next/head';
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
 import styles from '../../styles/article.module.scss'
+import ReactMarkdown from 'react-markdown';
+
+
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
@@ -38,7 +41,8 @@ export default function Post({ postData }) {
             {postData.description}
           </div>
         </div>
-        <div className={styles.articlebody} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <ReactMarkdown className={styles.articlebody} children={postData.contentMarkdown} />
+        {/* <div className={styles.articlebody} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} /> */}
       </article>
     </Layout>
   );
