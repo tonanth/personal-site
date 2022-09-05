@@ -6,8 +6,11 @@ import html from 'remark-html';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
+function getValidPosts() {
+  return
+} 
 
-export async function getPostData(id) {
+export async function getPostData(id : string) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
@@ -19,7 +22,7 @@ export async function getPostData(id) {
   //   .use(html)
   //   .process(matterResult.content);
   // const contentHtml = processedContent.toString();
-  
+   
 
   // Combine the data with the id and contentHtml
   return {
@@ -29,6 +32,10 @@ export async function getPostData(id) {
   };
 }
 
+interface FileMetadata {
+  date : string
+
+} 
 
 export function getSortedPostsData() {
   // Get file names under /posts
@@ -43,7 +50,6 @@ export function getSortedPostsData() {
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
-
     // Combine the data with the id
     return {
       id,
@@ -51,11 +57,12 @@ export function getSortedPostsData() {
     };
   });
 
-  const validPostData = allPostsData.filter((postData) => {
+  const validPostData = allPostsData.filter((postData : any) => {
     return postData.publish
   })
 
   // Sort posts by date
+  // @ts-ignore
   return validPostData.sort(({ date: a }, { date: b }) => {
     if (a < b) {
       return 1;
