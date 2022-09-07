@@ -9,7 +9,7 @@ publish: true
 
 When I was writing some CSS for the rendered article HTML, I found myself having to repeatedly target the article first followed by its descendants. This resulted in my stylesheet looking something like this:
 
-```
+```scss
 .article-body {
   /* common rules for the entire article */
 }
@@ -31,7 +31,7 @@ It looks somewhat repetitive due to the `.article-body` class selector, and I fi
 
 This is where Sass (or Syntactically Awesome Style Sheets) come in. Sass is a superset of CSS meaning that (with very little exception) every CSS file is a valid Sass file, so no relearning is necessary. It introduces the ability to nest selectors in braces so it is very clear which rules are being applied where and gives a very clear view of the HTML nesting structure. Here is the code above in Sass : 
 
-```
+```scss
 .article-body {
   /* common rules for the entire article */
 
@@ -61,6 +61,6 @@ Sass does have some downsides, however, such as need to compile because browsers
 
 NextJS supports importing Sass (both `.scss` and `.sass` extensions) and through CSS Modules using `.module.scss` and `.module.sass` extensions. NextJS makes the compilation seamless ; compilation is done automatically when Fast Refresh is running. All that's needed to use Sass is to install it using NPM:
 
-```
+```bash
 npm install --save-dev sass
 ```
