@@ -24,7 +24,16 @@ export default function Home({ allPostsData }) {
       <section className={utilStyles.headingMd}>
         <p><a href='github.com/tonanth'></a></p>
         <p>
-          Hello! I'm a software engineer.
+          Hello! I'm a software engineer specializing in web development. I currently work with the React library and am constantly learning to take advantage of more advanced features in both React and JavaScript.
+      
+          As a bonus side effect of working with frontend, I also have experience in HTML and CSS.
+
+          I also like to try out new libraries and frameworks from NPM.  
+        </p>
+        <p>
+          This website serves to document my journey into the world of web development. It is built in NextJS and hosted on GitHub Pages.
+
+          My GitHub is located <a href='https://github.com/tonanth'>here.</a>
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
