@@ -14,13 +14,13 @@ If you are able to read this page on your browser, then that means that the sani
 
 # Prerequisites
 
-NodeJS with NPM - allows running JavaScript code without a browser ; can be installed at <https://nodejs.org>
+* NodeJS with NPM - allows running JavaScript code without a browser ; can be installed at <https://nodejs.org>
 
-Some Javascript, JSX, HTML, CSS - the tutorial only covers the bare minimum 
+* Some Javascript, JSX, HTML, CSS - the tutorial only covers the bare minimum 
 
-Some Bash or Powershell - the tutorial only covers the bare minimum
+* Some Bash or Powershell - the tutorial only covers the bare minimum
 
-Some Git - needed to upload to GitHub if going through the commandline
+* Some Git - needed to upload to GitHub if going through the commandline
 
 # The tutorial
 
@@ -30,7 +30,7 @@ This personal site was created using NextJS and its accompanying tutorial locate
 
 Throughout the tutorial, the site was built and hosted through your own computer. If you would like to host your site on GitHub Pages or GitLab Pages, you'll need to export your site to static files in order to upload them. This can be done easily by editing `package.json` and adding the code below to the scripts and then running `npm run build`.
 
-```
+```js
 {
   "scripts" : 
     "build": "next build && next export -o outDir" 
@@ -41,7 +41,7 @@ This will output your site to a directory called `outDir` located in the same di
 
 As of August 2022, there is an issue with utilizing `next/image` while exporting and requires creating `next.config.mjs` in the root of the project directory and adding the code below to disable image optimizations. 
 
-```
+```js
 /**
  * @type {import('next').NextConfig}
  */
